@@ -1,8 +1,7 @@
 package com.course.msscbeerservice.web.controller;
 
+import com.course.msscbeerservice.service.BeerService;
 import com.course.msscbeerservice.web.model.BeerDto;
-import com.course.msscbrewbery.services.BeerService;
-import com.course.msscbrewbery.web.model.BeerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -33,11 +32,13 @@ public class BeerController {
         return new ResponseEntity<BeerDto>(beerService.getBeerById(beeId), HttpStatus.OK);
     }
 
+    //TODO update method
     @GetMapping({"/{}"})
     public ResponseEntity<BeerDto> getBeerByUpc(@PathVariable("")  UUID beeId) {
         return new ResponseEntity<BeerDto>(beerService.getBeerById(beeId), HttpStatus.OK);
     }
 
+    //TODO update method
     @GetMapping({"/{}"})
     public ResponseEntity<BeerDto> listAllBeers(@PathVariable("")  UUID beeId) {
         return new ResponseEntity<BeerDto>(beerService.getBeerById(beeId), HttpStatus.OK);
