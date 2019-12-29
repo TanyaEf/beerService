@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RequestMapping("/api/v1/beer")
@@ -40,7 +42,7 @@ public class BeerController {
 //    }
 
     @PostMapping
-    public ResponseEntity<BeerDto> createNewBeer(@RequestBody BeerDto beer) {
+    public ResponseEntity<BeerDto> createNewBeer(@Valid @RequestBody BeerDto beer) {
 //        BeerDto savedBeerDtoV2 = beerService.saveBeer(beer);
 //        HttpHeaders httpHeaders = new HttpHeaders();
 //        httpHeaders.add("Location", "/api/v1/beer/" + savedBeerDtoV2.getUuid().toString());
@@ -49,7 +51,7 @@ public class BeerController {
     }
 
     @PutMapping({"/{beerId}"})
-    public ResponseEntity<BeerDto> updateBeerById(@PathVariable("beerId")UUID uuid, @RequestBody BeerDto beer) {
+    public ResponseEntity<BeerDto> updateBeerById(@PathVariable("beerId")UUID uuid, @Valid @RequestBody BeerDto beer) {
 //        BeerDto updatedBeerDtoV2 = beerService.updateBeer(uuid, beer);
 //        HttpHeaders httpHeaders = new HttpHeaders();
 //        httpHeaders.add("Location", "/api/v2/beer/" + updatedBeerDtoV2.getUuid().toString());
