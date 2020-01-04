@@ -62,7 +62,7 @@ class BeerControllerTest {
                                 parameterWithName("iscold").description("Is Beer Cold Query param")
                         ),
                         responseFields(
-                                fieldWithPath("uuid").description("Id of Beer"),
+                                fieldWithPath("uuid").description("Id of Beer").type(UUID.class),
                                 fieldWithPath("version").description("Version number"),
                                 fieldWithPath("createdDate").description("Date Created"),
                                 fieldWithPath("lastModifiedDate").description("Date Updated"),
