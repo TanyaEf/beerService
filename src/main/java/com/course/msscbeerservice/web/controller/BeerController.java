@@ -25,8 +25,8 @@ public class BeerController {
 
     @GetMapping({"/{beerId}"})
     public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId")  UUID beeId) {
-//        return new ResponseEntity<BeerDto>(beerService.getBeerById(beeId), HttpStatus.OK);
-        return new ResponseEntity<BeerDto>(HttpStatus.OK);
+        return new ResponseEntity<BeerDto>(beerService.getBeerById(beeId), HttpStatus.OK);
+//        return new ResponseEntity<BeerDto>(HttpStatus.OK);
     }
 
     //TODO update method
