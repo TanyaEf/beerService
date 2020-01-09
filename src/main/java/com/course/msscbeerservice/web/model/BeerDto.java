@@ -22,10 +22,14 @@ public class BeerDto {
     private String beerName;
     @NotNull
     private BeerStyleEnum beerStyle;
+
     @Positive
     @NotNull
-    private Long upc;
-    private @Positive Integer quantityOnHand;
+    private String upc;
+
+    @Positive
+    private Integer quantityOnHand;
+
     @NotNull
     @Positive
     @JsonFormat(shape = JsonFormat.Shape.STRING)
