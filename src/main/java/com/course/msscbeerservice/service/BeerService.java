@@ -5,9 +5,9 @@ import com.course.msscbeerservice.web.model.BeerDto;
 import java.util.UUID;
 
 public interface BeerService {
-    BeerDto getBeerById(UUID beeId);
+    BeerDto getBeerById(UUID beerId);
 
-    BeerDto saveBeer(BeerDto beer);
+    BeerDto saveBeer(BeerDto beerDto);
 
-    BeerDto updateBeer(UUID uuid, BeerDto beer);
+    BeerDto updateBeer(UUID uuid, BeerDto beerDto);
 }
