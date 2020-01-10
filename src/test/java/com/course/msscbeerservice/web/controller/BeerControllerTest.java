@@ -1,5 +1,6 @@
 package com.course.msscbeerservice.web.controller;
 
+import com.course.msscbeerservice.bootstrap.BeerLoader;
 import com.course.msscbeerservice.domain.Beer;
 import com.course.msscbeerservice.service.BeerService;
 import com.course.msscbeerservice.web.model.BeerDto;
@@ -35,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 //import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 @ExtendWith(RestDocumentationExtension.class)
-@AutoConfigureRestDocs(uriScheme = "https", uriHost = "com.course.msscbeerservic", uriPort = 80)
+@AutoConfigureRestDocs(uriScheme = "https", uriHost = "com.course.msscbeerservice", uriPort = 80)
 @WebMvcTest({BeerController.class})
 @ComponentScan(basePackages = "com.course.msscbeerservice.web.mappers")
 class BeerControllerTest {
@@ -117,7 +118,7 @@ class BeerControllerTest {
                 .beerName("My Beer")
                 .beerStyle(BeerStyleEnum.ALE)
                 .price(new BigDecimal("2.99"))
-                .upc(123123123123L)
+                .upc(BeerLoader.BEER_1_UPC)
                 .build();
     }
 
