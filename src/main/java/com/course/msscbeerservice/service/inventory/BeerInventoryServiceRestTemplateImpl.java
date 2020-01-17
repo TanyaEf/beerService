@@ -1,4 +1,4 @@
-package com.course.msscbeerservice.service;
+package com.course.msscbeerservice.service.inventory;
 
 import com.course.msscbeerservice.web.model.BeerInventoryDto;
 import lombok.extern.slf4j.Slf4j;

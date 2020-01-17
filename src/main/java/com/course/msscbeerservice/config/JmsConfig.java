@@ -7,6 +7,7 @@ import org.springframework.jms.support.converter.MessageType;
 
 @Configuration
 public class JmsConfig {
+    public final  static String  BREWING_REQUEST_QUEU = "brewing-request";
     @Bean // Serialize message content to json using TextMessage
     public MappingJackson2MessageConverter jacksonJmsMessageConverter() {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
