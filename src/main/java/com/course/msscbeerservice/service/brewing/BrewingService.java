@@ -1,4 +1,4 @@
-package com.course.msscbeerservice.service;
+package com.course.msscbeerservice.service.brewing;
 
 import com.course.msscbeerservice.config.JmsConfig;
 import com.course.msscbeerservice.domain.Beer;
