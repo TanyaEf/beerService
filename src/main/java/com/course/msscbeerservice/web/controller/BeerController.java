@@ -1,17 +1,14 @@
 package com.course.msscbeerservice.web.controller;
 
 import com.course.msscbeerservice.service.BeerService;
-import com.course.msscbeerservice.web.model.BeerDto;
-import com.course.msscbeerservice.web.model.BeerPagedList;
-import com.course.msscbeerservice.web.model.BeerStyleEnum;
+import com.course.msscbeerservice.brewery.model.BeerDto;
+import com.course.msscbeerservice.brewery.model.BeerPagedList;
+import com.course.msscbeerservice.brewery.model.BeerStyleEnum;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

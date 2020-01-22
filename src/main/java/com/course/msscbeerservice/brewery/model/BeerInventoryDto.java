@@ -1,4 +1,4 @@
-package com.course.msscbeerservice.web.model;
+package com.course.msscbeerservice.brewery.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

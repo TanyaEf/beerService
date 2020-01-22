@@ -1,10 +1,9 @@
 package com.course.msscbeerservice.web.controller;
 
 import com.course.msscbeerservice.bootstrap.BeerLoader;
-import com.course.msscbeerservice.domain.Beer;
 import com.course.msscbeerservice.service.BeerService;
-import com.course.msscbeerservice.web.model.BeerDto;
-import com.course.msscbeerservice.web.model.BeerStyleEnum;
+import com.course.msscbeerservice.brewery.model.BeerDto;
+import com.course.msscbeerservice.brewery.model.BeerStyleEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.RestDocumentationExtension;
 import org.springframework.restdocs.constraints.ConstraintDescriptions;
@@ -21,7 +19,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
-import java.util.Optional;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;

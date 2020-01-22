@@ -1,6 +1,6 @@
-package com.course.msscbeerservice.event;
+package com.course.msscbeerservice.brewery.model.event;
 
-import com.course.msscbeerservice.web.model.BeerDto;
+import com.course.msscbeerservice.brewery.model.BeerDto;
 import lombok.*;
 
 import java.io.Serializable;
