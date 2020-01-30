@@ -10,6 +10,7 @@ import org.springframework.jms.support.converter.MessageType;
 public class JmsConfig {
     public final  static String  BREWING_REQUEST_QUEU = "brewing-request";
     public static final String NEW_INVENTORY_QUEUE = "new-inventory";
+    public static final String ALLOCATE_ORDER_RESPONSE_QUEUE = "allocate-order-response";
 
     @Bean // Serialize message content to json using TextMessage
     public MappingJackson2MessageConverter jacksonJmsMessageConverter(ObjectMapper objectMapper) {
